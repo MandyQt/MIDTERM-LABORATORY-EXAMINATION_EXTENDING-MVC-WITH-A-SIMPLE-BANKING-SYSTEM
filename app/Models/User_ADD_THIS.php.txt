@@ -1,0 +1,8 @@
+// 1) Add this import at the top of app/Models/User.php
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+// 2) Add this method inside the User class
+public function accounts(): HasMany
+{
+    return $this->hasMany(Account::class);
+}
